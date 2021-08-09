@@ -6,20 +6,20 @@
 
 ## Bài 16 : Dùng function như tham số CallBack
 
-- Xem [Dùng function như tham số CallBack](.\detail\16\index.md)
+- Xem [Dùng function như tham số CallBack](./detail/16/index.md)
 
 ## Bài 20 : Array.reduce (P1)
 
-- Xem [Array.reduce](.\detail\20\index.md)
+- Xem [Array.reduce](./detail/20/index.md)
 
 ## Bài 21 : Ứng dụng thực tế các Method của Array
 
-- Xem [Ứng dụng thực tế các Method của Array](.\detail\21\index.md)
+- Xem [Ứng dụng thực tế các Method của Array](./detail/21/index.md)
 
 ## Bài 22 : Array.reduce (P2)
 
-- Xem [Array.reduce](.\detail\22\index.md)
+- Xem [Array.reduce](./detail/22/index.md)
 
 ## Bài 25 : The `new` keyword
 
-- Xem [The `new` keyword](.\detail\25\index.md)
+- Xem [The `new` keyword](./detail/25/index.md)
