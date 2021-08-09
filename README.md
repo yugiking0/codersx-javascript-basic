@@ -1,5 +1,7 @@
 # TỔNG HỢP GHI CHÚ CodersX
 
+Kiểm tra Develop Update
+
 <!-- prettier-ignore -->
 <!-- <img src="./images/002.png" alt="setInterval" width="500px"/> -->
 <!-- ![Console](./images/001.png "Console") -->
