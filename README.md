@@ -1,6 +1,6 @@
 # TỔNG HỢP GHI CHÚ CodersX
 
-Kiểm tra Develop Update
+Đây là những thay đổi của nhánh 01 không phải nhánh Develop nhé!!!!!!!!
 
 <!-- prettier-ignore -->
 <!-- <img src="./images/002.png" alt="setInterval" width="500px"/> -->
