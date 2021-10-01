@@ -1,27 +1,22 @@
-// Constructor Function
-var Tom = {
-  name: 'Tom',
-  stomach: [],
-  eat: function (mouse) {
-    this.stomach.push(mouse);
-    mouse.isEat();
-    return this; // Lưu ý: có return this để dùng method chaining
-  },
-};
+'strict mode';
+//!Synchronous vs Asynchronous
+const fs = require('fs');
 
-function Mouse(name, color) {
-  this.name = name;
-  this.color = color;
-  this.status = 'alive';
-  this.isEat = function () {
-    this.status = 'die';
-  };
-}
+//note: readFileSyn - readFile
 
-var m1 = new Mouse('m1', 'black');
-var m2 = new Mouse('m2', 'white');
-var m3 = new Mouse('m3', 'blue');
+//? Synchronous: readFileSyn
+console.log('Begin Sync');
+var data = fs.readFileSync('./detail/docs/test1.txt', 'utf-8');
+console.log('Noi dung readFileSyn: ', data);
+console.log('End Sync');
+console.log('================================');
+//? Asynchronous: readFile
+console.log('Begin Async');
+var data = fs.readFile('./detail/docs/test2.txt', 'utf-8', (err, data) => {
+  if (err) {
+    console.log(new Error(err));
+  }
+  console.log('Noi dung readFile Async: ', data);
+});
 
-Tom.eat(m1).eat(m2).eat(m3);
-
-console.log(Tom);
+console.log('End Async');

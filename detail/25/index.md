@@ -159,7 +159,7 @@ console.log('mouse2:', mouse2);
 
 ### Bài 1
 
-Bài toán : Cat eat Mouse theo Object như sau:
+> Bài toán : Cat eat Mouse theo Object như sau:
 
 ```js
 var Tom = {
@@ -183,7 +183,7 @@ console.log(Tom);
 ![Tom eat](./images/008.png 'Cat eat Mouse')
 ![Tom eat](./images/009.png 'Cat eat Mouse')
 
-- Áp dụng bài toán khi sử dụng Constructor Function
+- Áp dụng bài toán khi sử dụng **_`Constructor Function`_**
 
 ```js
 // Constructor Function
