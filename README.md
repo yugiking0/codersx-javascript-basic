@@ -1,6 +1,6 @@
 # TỔNG HỢP GHI CHÚ CodersX
 
-Đây là những thay đổi của nhánh 01 không phải nhánh Develop nhé!!!!!!!!
+https://yugiking0.github.io/codersx-javascript-basic/
 
 <!-- prettier-ignore -->
 <!-- <img src="./images/002.png" alt="setInterval" width="500px"/> -->
