@@ -40,4 +40,4 @@
 ## Bài 40 : Callback hell
 
 - Giải thích ý nghĩa của thuật ngữ callback hell
-- Xem [Sync. vs. Async](./detail/40/index.md)
+- Xem [Callback hell](./detail/40/index.md)
