@@ -36,3 +36,8 @@
 
 <!-- ![Console](./images/001.png "Console") -->
 <!-- <img src="./images/001.png" alt="JAVASCRIPT VỚI HTML" width="400px"/> -->
+
+## Bài 40 : Callback hell
+
+- Giải thích ý nghĩa của thuật ngữ callback hell
+- Xem [Sync. vs. Async](./detail/40/index.md)
