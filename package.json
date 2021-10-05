@@ -1,0 +1,24 @@
+{
+  "name": "codersx-javascript-basic",
+  "version": "1.0.0",
+  "description": "https://yugiking0.github.io/codersx-javascript-basic/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yugiking0/codersx-javascript-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yugiking0/codersx-javascript-basic/issues"
+  },
+  "homepage": "https://github.com/yugiking0/codersx-javascript-basic#readme",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "promise-fs": "^2.1.1",
+    "request": "^2.88.2"
+  }
+}

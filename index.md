@@ -41,3 +41,8 @@
 
 - Giải thích ý nghĩa của thuật ngữ callback hell
 - Xem [Callback hell](./detail/40/index.md)
+
+## Bài 41 : Promise
+
+- Hướng dẫn dùng Promise để giải quyết vấn đề callback hell
+- Xem [Promise](./detail/41/index.md)
