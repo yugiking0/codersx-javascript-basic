@@ -67,8 +67,9 @@ checkNumber('Check').then(
 
 ## 2. Sử dụng Promise-fs
 
+- Tham khảo cách dùng Promise-fs trước khi đi chi tiết về Promise
 - Cần cài đặt promise-fs trước khi sử dụng
-  > Các bước thực hiện: Chạy Terminal
+  **Các bước thực hiện: Chạy Terminal**
 - b1: node init
 - b2: npm install promise-fs
   > readFile thuộc Promise-fs là một hàm Callback cần trả về:
@@ -91,15 +92,27 @@ fs.readFile('./detail/docs/test1.txt', {encoding: 'utf8'})
 ```js
 // todo: Đọc file bằng readFile từ Promise-fs
 var fs = require('promise-fs');
-// prettier-ignore
-fs.readFile('./detail/docs/test1.txt', {encoding: 'utf8'})
-.then(res1 => console.log(res1))
-.then(()=> fs.readFile('./detail/docs/test2.txt', {encoding: 'utf8'}))
-.then(res2 => console.log(res2))
-.catch(error =>console.log(error));
+
+fs.readFile('../docs/test1.txt', { encoding: 'utf8' })
+  .then((res1) => {
+    console.log(res1);
+    return fs.readFile('../docs/test2.txt', { encoding: 'utf8' });
+  })
+  .then((res2) => console.log(res2))
+  .catch((error) => console.log(error));
 ```
 
 ![readFile-promise](./images/001.png 'readFile-promise')
+
+- Vì ở câu lệnh .then thứ nhất `.then((res1)=>..` trả về một Promise nên có thể chuyển tách thành:
+
+```js
+fs.readFile('../docs/test1.txt', { encoding: 'utf8' })
+  .then((res1) => console.log(res1))
+  .then(() => fs.readFile('../docs/test2.txt', { encoding: 'utf8' }))
+  .then((res2) => console.log(res2))
+  .catch((error) => console.log(error));
+```
 
 - Để dễ nhìn và ngắn gọn hơn ta viết lại bằng các hàm: đọc file, xử lý và báo lỗi như sau:
 
@@ -129,6 +142,13 @@ readFilePromise('./detail/docs/test1.txt')
 hoặc
 
 ```js
+// prettier-ignore
+readFilePromise('./detail/docs/test1.txt')
+.then(onDone)
+.catch(onError);
+
+//=======================================
+
 readFilePromise('./detail/docs/test1.txt')
   .then(onDone)
   .then(() => readFilePromise('./detail/docs/test2.txt'))
@@ -167,6 +187,8 @@ readFilePromise('./detail/docs/test1.txt')
   .then(onDone)
   .catch(onError);
 ```
+
+- Xem [Promise-fs](./promise-fs.js)
 
 ---
 
@@ -303,37 +325,42 @@ readFile2(path).then('', onError);
 - Final
 
 ```js
-// todo: Đọc file bằng readFile + Promise
-const fs = require('fs');
+//todo: Đọc file bằng readFile + Promise
 
-var onDone = function (data) {
-  return console.log('Du lieu: ' + data);
-};
+var fs = require('fs');
 
-var onError = function (error) {
-  console.log(error + '');
-};
+// Sử dụng readFile và Promise để viết lại xử lý tương tự promise-fs.readFile
 
-var readFile2 = (path) => {
-  return new Promise((resolve, rejects) => {
-    for (var i = 0; i < path.length; i++) {
-      fs.readFile(path[i], { encoding: 'utf-8' }, (err, data) => {
-        if (err) {
-          return rejects(new Error(err));
-        }
-        return resolve(onDone(data));
-      });
-    }
+let readFile = (path) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, { encoding: 'utf-8' }, (error, data) => {
+      if (error) return reject(error);
+      return resolve(data);
+    });
   });
 };
 
-var path = [
-  './detail/docs/test1.txt',
-  './detail/docs/test12.txt',
-  './detail/docs/test3.txt',
-];
-readFile2(path).then(onDone, onError);
+readFile('../docs/test1.txt')
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err + ''));
+
+var onDone = (res) => console.log(res);
+var onError = (err) => console.log(err);
+
+//prettier-ignore
+readFile('../docs/test2.txt')
+.then(onDone)
+.catch(onError);
+
+// Xử lý đọc nhiều file liên tục và lần lượt
+readFile('../docs/song1.txt')
+  .then(onDone)
+  .then(() => readFile('../docs/song2.txt'))
+  .then(onDone)
+  .catch(onError);
 ```
+
+- Xem [readFile Promise](./readfile-pr.js)
 
 ---
 

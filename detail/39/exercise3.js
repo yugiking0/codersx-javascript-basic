@@ -5,16 +5,6 @@
  */
 
 const axios = require('axios');
-// axios({
-//   method: 'GET',
-//   url: 'https://jsonplaceholder.typicode.com/todos/1',
-// })
-//   .then((res) => {
-//     console.log(res.data);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
 
 function onDone(res) {
   return console.log(res.data);
@@ -23,17 +13,28 @@ function onDone(res) {
 function onError(err) {
   return console.error(err + '');
 }
+
 let getUser = (path) => {
-  return axios({
-    method: 'GET',
-    url: path,
+  return new Promise((resolve, reject) => {
+    return axios
+      .get(path)
+      .then((response) => resolve(response))
+      .catch((error) => reject(error));
   });
 };
-getUser('https://jsonplaceholder.typicode.com/todos/1')
-  .then(onDone)
-  .then(getUser('https://jsonplaceholder.typicode.com/todos/2'))
-  .catch(onError);
 
-getUser('https://jsonplaceholder.typicode.com/todos/2')
+getUser('https://jsonplaceholder.typicode.com/todos/1')
+  .then((res) => {
+    onDone(res);
+    return getUser('https://jsonplaceholder.typicode.com/todos/33332');
+  })
+  .then((res) => {
+    onDone(res);
+    return getUser('https://jsonplaceholder.typicode.com/todos/3');
+  })
+  .then((res) => {
+    onDone(res);
+    return getUser('https://jsonplaceholder.typicode.com/todos/99994');
+  })
   .then(onDone)
   .catch(onError);
