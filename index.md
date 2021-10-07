@@ -46,3 +46,8 @@
 
 - Hướng dẫn dùng Promise để giải quyết vấn đề callback hell
 - Xem [Promise](./detail/41/index.md)
+
+## Bài 42 : Promise.all
+
+- Hướng dẫn dùng Promise.all để xử lý song song nhiều tác vụ
+- Xem [Promise.all](./detail/42/index.md)
