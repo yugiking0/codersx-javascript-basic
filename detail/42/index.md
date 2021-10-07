@@ -112,6 +112,10 @@ Promise.all([
  */
 ```
 
+- Xem [Cách làm cũ trước đó](./baitap-older.js)
+
+- Ta xử lý bài tập trên như sau:
+
 ```js
 const axios = require('axios');
 
@@ -160,5 +164,7 @@ setTimeout(() => {
 ```
 
 ![Promise all Axios Error](./images/005.png 'Promise all Axios Error')
+
+- Xem [Giải bài tập](./baitap.js)
 
 ---
