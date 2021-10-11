@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yugiking0/codersx-javascript-basic#readme",
   "dependencies": {
     "axios": "^0.22.0",
+    "co": "^4.6.0",
     "promise-fs": "^2.1.1",
     "request": "^2.88.2"
   }

@@ -1,4 +1,4 @@
-# TỔNG HỢP GHI CHÚ CodersX
+# TỔNG HỢP Javascript CodersX
 
 <!-- prettier-ignore -->
 <!-- <img src="./images/002.png" alt="setInterval" width="500px"/> -->
@@ -51,3 +51,13 @@
 
 - Hướng dẫn dùng Promise.all để xử lý song song nhiều tác vụ
 - Xem [Promise.all](./detail/42/index.md)
+
+## Bài 43 : node co
+
+- Hướng dẫn dùng co module để viết async code gọn gàng hơn
+- Xem [node co](./detail/43/index.md)
+
+## Bài 44 : async await
+
+- Hướng dẫn sử dụng async await để thay thế co
+- Xem [async await](./detail/44/index.md)
