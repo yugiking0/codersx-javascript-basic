@@ -144,18 +144,6 @@ co(function* () {
 - Hoặc ta viết liên tục xử lý nhiều Promise trong khối Block lệnh Co như sau:
 
 ```js
-const fs = require('fs');
-const co = require('co');
-
-let readPromise = (path) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, 'utf-8', (error, data) => {
-      if (error) return reject(error);
-      return resolve(data);
-    });
-  });
-};
-
 co(function* () {
   var song1 = yield readPromise('./song1.txt');
   var song2 = yield readPromise('./song2.txt');
@@ -167,18 +155,6 @@ co(function* () {
 - Hoặc
 
 ```js
-const fs = require('fs');
-const co = require('co');
-
-let readPromise = (path) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, 'utf-8', (error, data) => {
-      if (error) return reject(error);
-      return resolve(data);
-    });
-  });
-};
-
 var arr = co(function* () {
   var song1 = yield readPromise('./song2.txt');
   var song2 = yield readPromise('./song1.txt');
@@ -198,18 +174,6 @@ setTimeout(() => {
 - Ta có thể xử lý `yield` là 1 mảng như sau:
 
 ```js
-const fs = require('fs');
-const co = require('co');
-
-let readPromise = (path) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, 'utf-8', (error, data) => {
-      if (error) return reject(error);
-      return resolve(data);
-    });
-  });
-};
-
 co(function* () {
   var values = yield [
     readPromise('./song2.txt'),
