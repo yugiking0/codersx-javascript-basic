@@ -61,3 +61,23 @@
 
 - Hướng dẫn sử dụng async await để thay thế co
 - Xem [async await](./detail/44/index.md)
+
+## Bài 45 : setTimeout và clearTimeout
+
+- Giới thiệu về hàm setTimeout và clearTimeout
+- Xem [setTimeout và clearTimeout](./detail/45/index.md)
+
+## Bài 46 : setInterval và clearInterval
+
+- Giới thiệu về hàm setInterval và clearInterval
+- Xem [setInterval và clearInterval](./detail/46/index.md)
+
+## Bài 47 : Date
+
+- Giới thiệu về Date và cách tương tác với Date
+- Xem [Date và cách tương tác với Date](./detail/47/index.md)
+
+## Bài 48 : Scope
+
+- Giới thiệu về scope trong JavaScript
+- Xem [Scope](./detail/48/index.md)
